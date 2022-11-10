@@ -13,15 +13,21 @@ import java.util.List;
 
 @Repository
 public interface EstudanteRepository extends JpaRepository<Estudante, Long> {
+    @Query("from Estudante where id=: id")
+    public Estudante findById();
 
+    @Query("from Estudante where ativo =: ativo")
     public List<Estudante> findByAtivoTrue();
 
-    public List<Estudante> findAllById(@Param("id") final Long id);
+    @Query("from Estudante where nome =: nome")
+    public List<Estudante> findByNome(final String nome);
+}
+
+//    public List<Estudante> findByAtivoTrue();
+//
+//    public List<Estudante> findAllById(@Param("id") final Long id);
 
     //public List<Estudante> findByIdAtivoTrue(@Param("id")final Long id);
 
   //  public List<Estudante> findByNome(@Param("nome") final String nome);
 
-
-
-}

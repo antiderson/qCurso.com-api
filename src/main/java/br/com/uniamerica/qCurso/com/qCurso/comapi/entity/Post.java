@@ -1,12 +1,16 @@
 package br.com.uniamerica.qCurso.com.qCurso.comapi.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "tb_post", schema = "public")
 public class Post extends AbstractEntity implements Serializable {
 

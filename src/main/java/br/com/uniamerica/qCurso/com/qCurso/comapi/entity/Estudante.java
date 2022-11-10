@@ -1,6 +1,8 @@
 package br.com.uniamerica.qCurso.com.qCurso.comapi.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -10,6 +12,8 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "tb_estudante", schema = "public")
 public class Estudante extends AbstractEntity implements Serializable {
 
